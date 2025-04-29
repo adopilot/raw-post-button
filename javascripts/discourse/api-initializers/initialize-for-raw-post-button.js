@@ -1,5 +1,6 @@
 import { apiInitializer } from "discourse/lib/api";
 import ShowRawButton from "../components/show-raw-button";
+import ShowAdoButton from "../components/show-ado-button";
 
 export default apiInitializer("1.34.0", (api) => {
   const currentUser = api.getCurrentUser();
@@ -20,10 +21,10 @@ export default apiInitializer("1.34.0", (api) => {
       context: { firstButtonKey,lastHiddenButtonKey, secondLastHiddenButtonKey },
     }) => {
       dag.add("show-raw", ShowRawButton, {
-        before: firstButtonKey,
-        after: firstButtonKey
+        before: lastHiddenButtonKey,
+        after: secondLastHiddenButtonKey
       },
-      dag.add("show-ado", ShowRawButton, {
+      dag.add("show-ado", ShowAdoButton, {
         before: lastHiddenButtonKey,
         after: secondLastHiddenButtonKey
       })
