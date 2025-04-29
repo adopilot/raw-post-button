@@ -6,18 +6,19 @@ import FullscreenCode from "discourse/components/modal/fullscreen-code";
 import { ajax } from "discourse/lib/ajax";
 import { popupAjaxError } from "discourse/lib/ajax-error";
 
-export default class ShowRawButton extends Component {
+export default class ShowNaplatiButton extends Component {
   static hidden = true;
 
   @service modal;
 
   @action
-  async showRaw() {
+
+async ShowNaplati() {
     try {
      const link = window.location.href;
             const title = document.title;
             window.open(
-              `http://erp.rgt.ba/ipPref/Task?url=${encodeURIComponent(link)}&title=${encodeURIComponent(title)}`,
+              `http://dnn.robot.ba/ipPref/Task?url=${encodeURIComponent(link)}&title=${encodeURIComponent(title)}`,
               "_blank",
               "width=1120,height=480"
             );
@@ -25,14 +26,15 @@ export default class ShowRawButton extends Component {
       popupAjaxError(e);
     }
   }
+
   <template>
     <DButton
-      class="post-action-menu__raw-post raw-post"
+      class="post-action-menu__raw-post btn-flat"
       ...attributes
-      @action={{this.showRaw}}
-      @icon="file-lines"
-      @label={{if @showLabel (themePrefix "button_label")}}
-      @title={{themePrefix "button_title"}}
+      @action={{this.ShowNaplati}}
+      @icon="check"
+      @label={{if @showLabel (themePrefix "naplata_label")}}
+      @title={{themePrefix "naplata_title"}}
     />
   </template>
 }

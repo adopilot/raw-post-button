@@ -6,21 +6,20 @@ import FullscreenCode from "discourse/components/modal/fullscreen-code";
 import { ajax } from "discourse/lib/ajax";
 import { popupAjaxError } from "discourse/lib/ajax-error";
 
-export default class ShowAdoButton extends Component {
+export default class ShowOtvoriButton extends Component {
   static hidden = true;
 
   @service modal;
 
   @action
 
-async showRaw() {
+async ShowOtvori() {
     try {
      const link = window.location.href;
-            const title = document.title;
             window.open(
-              `http://dnn.robot.ba/ipPref/Task?url=${encodeURIComponent(link)}&title=${encodeURIComponent(title)}`,
+              `http://core.rgt.ba/ProblemiKasa/Create?url=${encodeURIComponent(link)}`,
               "_blank",
-              "width=1120,height=480"
+              "width=800,height=600"
             );
     } catch (e) {
       popupAjaxError(e);
@@ -29,12 +28,12 @@ async showRaw() {
 
   <template>
     <DButton
-      class="post-action-menu__raw-post raw-post"
+      class="post-action-menu__raw-post btn-flat"
       ...attributes
-      @action={{this.showRaw}}
-      @icon="check"
-      @label={{if @showLabel (themePrefix "ado_label")}}
-      @title={{themePrefix "ado_title"}}
+      @action={{this.ShowOtvori}}
+      @icon="cart-plus"
+      @label={{if @showLabel (themePrefix "otvori_label")}}
+      @title={{themePrefix "otvori_title"}}
     />
   </template>
 }
