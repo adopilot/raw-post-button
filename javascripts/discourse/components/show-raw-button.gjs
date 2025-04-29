@@ -14,14 +14,13 @@ export default class ShowRawButton extends Component {
   @action
   async showRaw() {
     try {
-      const response = await ajax(`/posts/${this.args.post.id}/raw`, {
-        dataType: "text",
-      });
-      await this.modal.show(FullscreenCode, {
-        model: {
-          code: response,
-        },
-      });
+     const link = window.location.href;
+            const title = document.title;
+            window.open(
+              `http://erp.rgt.ba/ipPref/Task?url=${encodeURIComponent(link)}&title=${encodeURIComponent(title)}`,
+              "_blank",
+              "width=1120,height=480"
+            );
     } catch (e) {
       popupAjaxError(e);
     }
