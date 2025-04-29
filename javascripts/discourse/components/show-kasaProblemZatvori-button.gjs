@@ -31,7 +31,7 @@ async ShowZatvori() {
       class="post-action-menu__raw-post btn-flat"
       ...attributes
       @action={{this.ShowZatvori}}
-      @icon="fa-cart-arrow-down"
+      @icon="fab-cart-arrow-down"
       @label={{if @showLabel (themePrefix "zatvori_label")}}
       @title={{themePrefix "zatvori_title"}}
     />
