@@ -17,18 +17,10 @@ export default apiInitializer("1.34.0", (api) => {
   api.registerValueTransformer(
     "post-menu-buttons",
     ({
-      value: dag,
-      context: { firstButtonKey,lastHiddenButtonKey, secondLastHiddenButtonKey },
+      value: dag
     }) => {
-      dag.add("show-raw", ShowRawButton, {
-        before: lastHiddenButtonKey,
-        after: secondLastHiddenButtonKey
-      },
-      dag.add("show-ado", ShowAdoButton, {
-        before: lastHiddenButtonKey,
-        after: secondLastHiddenButtonKey
-      })
-    );
+      dag.add("show-raw", ShowRawButton);
+      dag.add("show-ado", ShowAdoButton);
     }
   );
 });
