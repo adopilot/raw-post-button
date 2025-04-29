@@ -31,7 +31,7 @@ async ShowOtvori() {
       class="post-action-menu__raw-post btn-flat"
       ...attributes
       @action={{this.ShowOtvori}}
-      @icon="cart-plus"
+      @icon="cart-shopping"
       @label={{if @showLabel (themePrefix "otvori_label")}}
       @title={{themePrefix "otvori_title"}}
     />
