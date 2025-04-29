@@ -22,7 +22,12 @@ export default apiInitializer("1.34.0", (api) => {
       dag.add("show-raw", ShowRawButton, {
         before: firstButtonKey,
         after: firstButtonKey
-      });
+      },
+      dag.add("show-raw", ShowRawButton, {
+        before: firstButtonKey,
+        after: firstButtonKey
+      })
+    );
     }
   );
 });
