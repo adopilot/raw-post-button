@@ -5,9 +5,15 @@
   "license_url": "https://github.com/discourse/raw-post-button/blob/main/LICENSE",
   "assets": {
   },
+  "color_schemes": {
+
+  },
+  "modifiers": {
+  },
   "icons": [
     "cart-arrow-down",
-    "cart-plus"
-  ],
-  "color_schemes": {}
+    "cart-plus",
+    "check"
+  ]
+  
 }
