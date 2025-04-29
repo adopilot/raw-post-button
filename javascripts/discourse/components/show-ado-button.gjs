@@ -32,7 +32,7 @@ async showRaw() {
       class="post-action-menu__raw-post raw-post"
       ...attributes
       @action={{this.showRaw}}
-      @icon="file-lines"
+      @icon="check"
       @label={{if @showLabel (themePrefix "ado_label")}}
       @title={{themePrefix "ado_title"}}
     />
