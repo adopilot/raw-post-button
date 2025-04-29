@@ -4,7 +4,10 @@
   "component": true,
   "license_url": "https://github.com/discourse/raw-post-button/blob/main/LICENSE",
   "assets": {
-    "icons-sprite": "/assets/sprite.svg"
   },
+  "icons": [
+    "cart-arrow-down",
+    "cart-plus"
+  ],
   "color_schemes": {}
 }
