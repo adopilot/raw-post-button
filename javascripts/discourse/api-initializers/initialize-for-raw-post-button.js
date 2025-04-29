@@ -23,9 +23,9 @@ export default apiInitializer("1.34.0", (api) => {
         before: firstButtonKey,
         after: firstButtonKey
       },
-      dag.add("show-raw", ShowRawButton, {
-        before: firstButtonKey,
-        after: firstButtonKey
+      dag.add("show-ado", ShowRawButton, {
+        before: lastHiddenButtonKey,
+        after: secondLastHiddenButtonKey
       })
     );
     }
