@@ -23,7 +23,7 @@ export default apiInitializer("1.34.0", (api) => {
     }) => {
       dag.add("show-naplati", ShowNaplatiButton);
       dag.add("show-otvori", ShowOtvoriButton);
-      dag.add("show-zatvori", ShowNaplatiButton);
+      dag.add("show-zatvori", ShowZatvoriButton);
      
     
     }
