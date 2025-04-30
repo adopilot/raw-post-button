@@ -18,8 +18,8 @@ async ShowNaplati() {
       
     
 
-      const post = this.args.context;
-      console.log("Post:", post);
+      const post = this.att.context;
+      console.log("currentUser:", currentUser);
       const postNumber = post?.post_number;
       const topicId = post?.topic_id;
       const username = this.currentUser.username;
