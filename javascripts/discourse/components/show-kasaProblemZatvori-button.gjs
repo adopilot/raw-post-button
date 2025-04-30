@@ -15,11 +15,20 @@ export default class ShowZatvoriButton extends Component {
 
 async ShowZatvori() {
     try {
-      const link = window.location.href;
+      
+const post = this.args.post;
+      const postId = post?.id??0;
+      const postNumber = post?.post_number??0;
+      const topicId = post?.topic_id??0;
+      const username = this.currentUser.username;
+    
+     const permalink = window.location.origin;
+    
+
             window.open(
-              `http://core.rgt.ba/ProblemiKasa/Zatvori?url=${encodeURIComponent(link)}`,
+              `http://core.robot.ba/ProblemiKasa/Zatvori?url=${encodeURIComponent(window.location.origin)}&user=${encodeURIComponent(username)}&topicId=${encodeURIComponent(topicId)}&postId=${encodeURIComponent(postId)}&postNumber=${encodeURIComponent(postNumber)}`,
               "_blank",
-              "width=800,height=600"
+              "width=1120,height=800"
             );
     } catch (e) {
       popupAjaxError(e);
