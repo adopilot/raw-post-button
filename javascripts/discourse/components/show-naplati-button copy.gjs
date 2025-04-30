@@ -15,7 +15,8 @@ export default class ShowNaplatiButton extends Component {
 
 async ShowNaplati() {
     try {
-     const link = window.location.href;
+            const currentUser = api.getCurrentUser();
+            const link = window.location.href;
             const title = document.title;
             window.open(
               `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(link)}&title=${encodeURIComponent(title)}&u=${encodeURIComponent(this.currentUser.username)}`,
