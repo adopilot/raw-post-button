@@ -28,7 +28,7 @@ async ShowNaplati() {
             window.open(
               `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(window.location.origin)}&user=${encodeURIComponent(username)}&topicId=${encodeURIComponent(topicId)}&postId=${encodeURIComponent(postId)}&postNumber=${encodeURIComponent(postNumber)}`,
               "_blank",
-              "width=1120,height=480"
+              "width=1120,height=800"
             );
     } catch (e) {
       popupAjaxError(e);
