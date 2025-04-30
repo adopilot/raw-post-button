@@ -18,15 +18,14 @@ async ShowNaplati() {
       
     
 
-     
-      console.log("currentUser:", this.args);
+         const post = this.args.named.post?.compute?.(); // ← calls the tracked post compute function
 
+    const postNumber = post?.post_number;
+    const topicId = post?.topic_id;
 
-    var postId = this.args.post.id
-    const link = window.location.href;
-    const permalink = `${link}/${this.args.post.id}`;
- 
+    const username = this.currentUser.username;
     
+     const permalink = `${window.location.origin}/t/${post.topic_id}/${post.post_number}`;
     
 
             window.open(
