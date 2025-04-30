@@ -7,7 +7,7 @@ import { ajax } from "discourse/lib/ajax";
 import { popupAjaxError } from "discourse/lib/ajax-error";
 import { apiInitializer } from "discourse/lib/api";
 
-export default class ShowNaplatiButton extends Component {
+export default class ShowNaplatiButton extends Component( (api) =>  {
   static hidden = true;
 
   @service modal;
@@ -40,3 +40,4 @@ async ShowNaplati() {
     />
   </template>
 }
+)
