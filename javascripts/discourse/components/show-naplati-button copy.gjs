@@ -18,13 +18,13 @@ async ShowNaplati() {
       
     
 
-      const post = this.att.context;
-      console.log("currentUser:", currentUser);
-      const postNumber = post?.post_number;
-      const topicId = post?.topic_id;
-      const username = this.currentUser.username;
+     
+      console.log("currentUser:", this.args);
 
- const permalink = `${window.location.origin}/t/${topicId}/${postNumber}`;
+
+    var postId = this.args.post.id
+    const link = window.location.href;
+    const permalink = `${link}/${this.args.post.id}`;
  
     
     
