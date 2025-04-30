@@ -17,17 +17,19 @@ async ShowNaplati() {
     try {
       
     
-    const postUrl = this.attrs.shareUrl; // reliable permalink to the post
+
+    const postNumber = this.attrs.post?.post_number;
+    const topicId = this.attrs.post?.topic_id;
+
     const username = this.currentUser.username;
 
-    if (!postNumber || !topicId) {
-      throw new Error("Cannot determine post or topic ID");
-    }
+ const permalink = `${window.location.origin}/t/${topicId}/${postNumber}`;
+ 
     
     
 
             window.open(
-              `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(postUrl)}&u=${encodeURIComponent(username)}`,
+              `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(permalink)}&u=${encodeURIComponent(username)}`,
               "_blank",
               "width=1120,height=480"
             );
