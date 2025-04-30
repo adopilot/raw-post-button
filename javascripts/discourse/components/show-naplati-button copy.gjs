@@ -18,7 +18,7 @@ async ShowNaplati() {
      const link = window.location.href;
             const title = document.title;
             window.open(
-              `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(link)}&title=${encodeURIComponent(title)}`,
+              `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(link)}&title=${encodeURIComponent(title)}&u=${encodeURIComponent(this.currentUser.username)}`,
               "_blank",
               "width=1120,height=480"
             );
