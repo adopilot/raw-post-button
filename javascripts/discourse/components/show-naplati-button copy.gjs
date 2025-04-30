@@ -16,22 +16,17 @@ export default class ShowNaplatiButton extends Component {
 async ShowNaplati() {
     try {
       
-     console.log("artg", this.args);
-
-         const post = this.args.post;
-
-         console.log("Post", post);
-
-    const postNumber = post?.post_number;
-    const topicId = post?.topic_id;
-
-    const username = this.currentUser.username;
+      const post = this.args.post;
+      const postId = post?.id??0;
+      const postNumber = post?.post_number??0;
+      const topicId = post?.topic_id??0;
+      const username = this.currentUser.username;
     
-     const permalink = `${window.location.origin}/t/${post.topic_id}/${post.post_number}`;
+     const permalink = window.location.origin;
     
 
             window.open(
-              `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(permalink)}&u=${encodeURIComponent(username)}`,
+              `http://olderp.robot.ba/ipPref/Task?url=${encodeURIComponent(window.location.origin)}&user=${encodeURIComponent(username)}&topicId=${encodeURIComponent(topicId)}&postId=${encodeURIComponent(postId)}&postNumber=${encodeURIComponent(postNumber)}`,
               "_blank",
               "width=1120,height=480"
             );
