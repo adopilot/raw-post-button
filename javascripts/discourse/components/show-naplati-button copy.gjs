@@ -16,9 +16,11 @@ export default class ShowNaplatiButton extends Component {
 async ShowNaplati() {
     try {
       
-    
+     console.log("artg", this.args);
 
-         const post = this.args.named.post?.compute?.(); // ← calls the tracked post compute function
+         const post = this.args.post;
+
+         console.log("Post", post);
 
     const postNumber = post?.post_number;
     const topicId = post?.topic_id;
