@@ -10,7 +10,7 @@ export default class ShowZatvoriButton extends Component {
   static hidden = true;
 
   @service modal;
-
+  @service currentUser; // <-- Inject the currentUser service
   @action
 
 async ShowZatvori() {
