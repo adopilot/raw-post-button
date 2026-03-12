@@ -1,7 +1,7 @@
 import { apiInitializer } from "discourse/lib/api";
 import ShowOtvoriButton from "../components/show-kasaProblemOtvori-button";
 import ShowZatvoriButton from "../components/show-kasaProblemZatvori-button";
-import ShowNaplatiButton from "../components/show-naplati-button copy";
+import ShowNaplatiButton from "../components/show-naplati-button-copy";
 
 export default apiInitializer("1.34.0", (api) => {
   const currentUser = api.getCurrentUser();
